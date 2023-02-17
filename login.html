@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Hub Login</title>
+	<link rel="stylesheet" type="text/css" href="student_hub_home.css">
+	<script>
+		function checkForm() {
+			var email = document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+			if (email !== "" && password !== "") {
+				document.getElementById("login-form").submit();
+			} else {
+				alert("Please fill in all the required fields.");
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="background-image"></div>
+	<div class="content">
+		<img src="study-image.jpg" alt="">
+		<h1>Student Hub</h1>
+		<form id="login-form">
+			<label for="email">Email/Username:</label>
+			<input type="text" id="email" name="email" placeholder="Enter your email/username" required>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password" required>
+			<button type="button" class="login-btn" title="Click to Login" onclick="checkForm()"><a href="home.html">LogIn</a></button>
+		</form>
+		<div class="extra-text">
+			<p><a href="signup.html" title="Create a new account here">Don't have an account? <u>Sign Up</u></a></p>
+			<p><a href="admin_login.html" title="Click here to login as an admin">Admin? <u>Login Here</u></a></p>
+		</div>
+	</div>
+</body>
+</html>
